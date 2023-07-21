@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "staythere",
+	"version": "${version}",
+	"name": "staythere",
+	"description": "Locks player movement",
+	"authors": [
+		"Pulga22 (Ds: julion_n)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/staythere/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.pulga22.staythere.StayThere"
+		],
+		"client": [
+			"net.pulga22.staythere.StayThereClient"
+		]
+	},
+	"mixins": [
+		"staythere.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.13",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

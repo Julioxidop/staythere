@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "net.pulga22.staythere.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"LockPlayerMovement",
+		"PlayerEntityData"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"client": [
+		"ClientPlayerEntityData"
+	]
+}
