@@ -14,8 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ClientPlayerEntity.class)
 public abstract class ClientPlayerEntityData {
 
-    @Shadow public Input input;
-
     @Inject(method = "move", at = @At("HEAD"), cancellable = true)
     public void cancelMove(MovementType movementType, Vec3d movement, CallbackInfo ci){
         if (((ILockData)((ClientPlayerEntity)(Object)this)).staythere$isLocked()){

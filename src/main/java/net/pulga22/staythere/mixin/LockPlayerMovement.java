@@ -19,7 +19,6 @@ public class LockPlayerMovement {
     public void lockMovement(PlayerMoveC2SPacket packet, CallbackInfo ci){
         if (((ILockData) player).staythere$isLocked()){
             ci.cancel();
-            System.out.println("CALL");
         }
     }
 
