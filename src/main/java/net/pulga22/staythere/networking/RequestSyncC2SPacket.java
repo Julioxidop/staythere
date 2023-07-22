@@ -17,7 +17,7 @@ public class RequestSyncC2SPacket {
             boolean state = ((ILockData) player).staythere$isLocked();
             PacketByteBuf buf1 = PacketByteBufs.create();
             buf1.writeBoolean(state);
-            ServerPlayNetworking.send(player, Packets.SYNC_S2C, buf1);
+            ServerPlayNetworking.send(player, Packets.CHANGE_STATE, buf1);
         });
 
     }
